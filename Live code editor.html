@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Live Code Editor</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'poppins',sans-serif;
+			box-sizing: border-box;
+		}
+
+		body{
+			background: #454545;
+			color: #fff;
+		}
+
+		.container{
+			width: 100%;
+			height: 100vh;
+			padding: 20px;
+			display: flex;
+		}
+
+		.left, .right{
+			flex-basis: 50%;
+			padding: 10px;
+		}
+
+		textarea{
+			width: 100%;
+			height: 28%;
+			background: #1f1f1f;
+			color: #fff;
+			padding: 10px 20px;
+			border: 0;
+			outline: 0;
+			font-size: 18;
+		}
+
+		iframe{
+			width: 100%;
+			height: 95%;
+			background: #fff;
+			border: 0;
+			outline: 0;
+		}
+
+		label i{
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		label{
+			display: flex;
+			align-items: center;
+			background: #000;
+			height: 30px;
+		}
+
+	</style>
+</head>
+<script src="https://kit.fontawesome.com/912f0772ea.js" crossorigin="anonymous"></script>
+<body>
+<div class="container">
+	<div class="left">
+		<label><i class="fa-brands fa-html5"></i>&nbsp;HTML</label>
+		<textarea id="html-code" onkeyup="run()"></textarea>
+
+		<label><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</label>
+		<textarea id="css-code" onkeyup="run()"></textarea>
+
+		<label><i class="fa-brands fa-js"></i>&nbsp;JavaScript</label>
+		<textarea id="javascript-code" onkeyup="run()"></textarea>
+	</div>
+	<div class="right">
+		<label><i class="fa-solid fa-play"></i>&nbsp;Output</label>
+		<iframe id="output"></iframe>
+	</div>
+</div>
+<script>
+	function run() {
+		let htmlcode = document.getElementById('html-code').value;
+		let csscode = document.getElementById('css-code').value;
+		let jscode = document.getElementById('javascript-code').value;
+		let output = document.getElementById('output');
+
+		output.contentDocument.body.innerHTML = htmlcode + "<style>"+csscode+"</style>";
+		output.contentWindow.eval(jscode);
+	}
+</script>
+<!--made by manuka sasen athukorala-->
+</body>
+</html>

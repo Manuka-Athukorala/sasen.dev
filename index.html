@@ -619,6 +619,58 @@ font-weight: 400;
   visibility: visible;
   opacity: 1;
 }
+
+.pcard{
+			background-color: #111;
+			width: 450px;
+			height: 400px;
+			border-radius: 20px;
+			margin: 20px;
+		}
+
+		.cc{
+			width: 450px;
+			padding: 20px;
+		}
+
+		.PP{
+			color: white;
+			padding-left: 20px;
+			padding-right: 20px;
+      padding-bottom: 20px;
+		}
+
+		.btnc{
+			margin-left: 20px;
+			border: none;
+			color: white;
+			background-color: blue;
+			border-radius: 20px;
+			height: 35px;
+      padding: 10px;
+		}
+
+    @media (min-width: 1472px) {
+      
+      .ffbx{
+        display: flex; 
+        justify-content: center;
+      }
+
+    }
+
+    @media (max-width: 1472px) {
+
+      .ffbx{
+        display: grid;
+        place-items: center;
+      }
+  
+    }
+
+
+
+    
 </style>
 
   <script>
@@ -725,13 +777,42 @@ font-weight: 400;
     <!--  projects  -->
   <section class="projects" id="projects">
   <div style="background-color: #111;">
-    <center>
-      <h2 class="title">Projects</h2>
+      <center>
+        <h2 class="title">Projects</h2>
+      </center>
       <div style="padding: 50px; background-color: #222;">
-        <h2>Coming Soon!</h2>
+      
+        <div class="ffbx">
+          <div class="pcard">
+              <img src="cc.png" class="cc">
+              <p class="PP">&nbsp;I Took a web temlate image from a web and <br>&nbsp;i recreated it. </p>
+              <a href="web temp.html">
+                <button class="btnc">&nbsp;<b>Check It Out</b>&nbsp;</button>
+              </a>
+          </div>
+  
+          <div class="pcard">
+            <img src="ll.png" class="cc">
+            <p class="PP">&nbsp;Live code editor inspiration by online compiler i <br>&nbsp;use when i started coding. </p>
+            <a href="live code editor.html">
+              <button class="btnc">&nbsp;<b>Check It Out</b>&nbsp;</button>
+            </a>
+          </div>
+  
+          <div class="pcard">
+            <img src="mmm.png" class="cc">
+            <p class="PP">&nbsp;Countdown for new year 2023 inspiration by <br>&nbsp;youtube video i saw. </p>
+            <a href="countdown.html">
+              <button class="btnc">&nbsp;<b>Check It Out</b>&nbsp;</button>
+            </a>
+          </div>
+
+        </div>
+
       </div>
-    </center>
+
   </div>
+  
   </section>
 
     <!-- contact -->
@@ -741,7 +822,8 @@ font-weight: 400;
           <h1>Manuka Sasen</h1>
           <p>Front-End Junior Web<br>Developer 👋</p>
           <div style="padding-bottom: 10px; font-size: 22px; color: #fff;">
-            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="https://github.com/Manuka-Athukorala"><i class="fa fa-github"></i></a>
+            <a href="https://replit.com/@sasen47code/BizBuds?v=1"><i class="fa-solid fa-code"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-youtube"></i></a>
             <a href="#"><i class="fa-regular fa-at"></i></a>
@@ -858,7 +940,7 @@ $(document).ready(function () {
 
 
 });
-//# sourceURL=pen.js
+
     </script>
 
   
